@@ -1,12 +1,13 @@
 import React from 'react';
-import data from '../data/studio.json'
 import Header from './Header'
+import Studios from './Studios'
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
           <Header />
+          <Studios />
       </div>
     );
   }

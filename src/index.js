@@ -3,7 +3,7 @@ import { render } from 'react-dom' // eslint-disable-line
 import { Provider } from 'react-redux' // eslint-disable-line
 import { createStore } from 'redux' // eslint-disable-line
 //import reducers from './reducers';
-import AppContainer from './containers/App';
+import AppContainer from './components/App.jsx';
 
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
