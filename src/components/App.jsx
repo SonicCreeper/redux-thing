@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header'
-import Studios from './Studios'
+import Studios from '../containers/Studios'
 
 class App extends React.Component {
   render() {
