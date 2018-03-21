@@ -1,3 +1,3 @@
 import { createAction } from 'redux-actions'; // eslint-disable-line
 
-//export const addStudio = createAction('');
+export const addKeyWords = createAction('ADD_KEY_WORD');
