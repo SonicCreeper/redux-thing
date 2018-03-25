@@ -8,9 +8,10 @@ const mapStateToProps = state => {
   }
   return props;
 };
-
-export default connect(
+console.log(actionCreators)
+const Container = connect(
   mapStateToProps,
   actionCreators,
 )(Component);
 
+export default Container;

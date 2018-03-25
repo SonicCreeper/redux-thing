@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header'
 import Studios from '../containers/Studios'
-import Filters from './Filters'
+import Filters from '../containers/Filters'
 
 class App extends React.Component {
   render() {
