@@ -16,6 +16,11 @@ class Filters extends React.Component {
     this.props.clearKeyWords();
   }
 
+  showKeyWords = () => 
+    <div>
+      {this.props.keyWords.map((item,i) => <div key={i}>{item}</div>)}
+    </div>
+
   render() {
     return (
       <div>
@@ -24,6 +29,9 @@ class Filters extends React.Component {
             <Field name="text" required component="input" type="text"/>
           </div>
       	</form>
+        <div>
+          {this.showKeyWords()}
+        </div>
         <button onClick={this.clearKeyWords}>Очистить фильтр</button>
       </div>
     );
