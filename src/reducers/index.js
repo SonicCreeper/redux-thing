@@ -16,7 +16,10 @@ const keyWords = handleActions({
   },
   [actions.clearKeyWords](state) {
   	return [];
-  }
+  },
+  [actions.removeKeyWord](state, { payload: word }) {
+  	return _.without(state, word)
+  },
 }, []);
 
 export default combineReducers({
