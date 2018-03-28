@@ -8,9 +8,7 @@ class Filters extends React.Component {
   }
 
 	addKeyWords = (e) => {
-    console.log('got new words')
     this.props.addKeyWords(e)
-    
     this.props.reset()
 	}
 
@@ -23,7 +21,7 @@ class Filters extends React.Component {
       <div>
       	<form onSubmit={this.props.handleSubmit(this.addKeyWords)}>
           <div className="form-group mx-3">
-            <Field name="text" required component="input" type="text" defaultValue='qwe'/>
+            <Field name="text" required component="input" type="text"/>
           </div>
       	</form>
         <button onClick={this.clearKeyWords}>Очистить фильтр</button>

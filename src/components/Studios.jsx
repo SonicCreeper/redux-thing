@@ -5,12 +5,7 @@ import data from '../data/studio.json'
 class Studios extends React.Component {
 
 
-	componentWillUpdate () {
-		console.log('wow!')
-	}
-
 	renderStudios = (item, index) => {
-
 		const keyWords = this.props.keyWords
 
 		if(keyWords.length) {
@@ -18,10 +13,7 @@ class Studios extends React.Component {
 				return null;
 			}
 		}
-		/*if(!_.intersection(item.params, this.props.keyWords)){
-			return
-		}*/
-		console.log(_.intersection(item.params, this.props.keyWords).length)
+
 		return (
 		<div key={item.id} id={item.id}>
 			<p>{item.name} {item.price}</p>
