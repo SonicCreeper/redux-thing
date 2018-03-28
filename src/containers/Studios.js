@@ -3,7 +3,8 @@ import Component from '../components/Studios.jsx'
 
 const mapStateToProps = state => {
   const props = {
-    studios: state.studios
+    studios: state.studios,
+    keyWords: state.keyWords,
   }
   return props;
 };

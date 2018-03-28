@@ -9,14 +9,14 @@ const studios = (state = {}, action) => {
 	return data.studios
 }
 
-
 const keyWords = handleActions({
   [actions.addKeyWords](state, { payload: {text} }) {
   	const newKeyWords = text.split(' ').filter(word => !state.includes(word));
-  	console.log(newKeyWords)
-  	console.log(state)
     return [...state,...newKeyWords];
   },
+  [actions.clearKeyWords](state) {
+  	return [];
+  }
 }, []);
 
 export default combineReducers({
