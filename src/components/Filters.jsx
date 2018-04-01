@@ -14,6 +14,8 @@ class Filters extends React.Component {
 	}
 
   componentDidMount () {
+    const slider = $("#slider").slider;
+    $('#slider-text').text('qwe')
     $( "#slider" ).slider({
       range: true,
       min: 0,
@@ -21,10 +23,10 @@ class Filters extends React.Component {
       step: 100,
       values: [ 1000, 2000 ],
       slide: function( event, ui ) {
-        $( "#amount" ).val( "Цена от " + ui.values[ 0 ] + " до " + ui.values[ 1 ] );
+        $('#slider-text').text( "Цена от " + ui.values[ 0 ] + " до " + ui.values[ 1 ] );
       }
     });
-    $( "#amount" ).val( "Цена от " + $( "#slider" ).slider( "values", 0 ) +
+    $('#slider-text').text( "Цена от " + $( "#slider" ).slider( "values", 0 ) +
       " до " + $( "#slider" ).slider( "values", 1 ) );
   }
 
@@ -57,7 +59,7 @@ class Filters extends React.Component {
       	</form>
 
         <div>
-          <input type="text" id="amount" readOnly style={{border: 0}}/>
+          <label id='slider-text'></label>
           <div id="slider" style={{width: 300+'px'}}></div>
         </div>
         
