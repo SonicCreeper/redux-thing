@@ -7,9 +7,14 @@ class Studios extends React.Component {
 
 	renderStudios = (item, index) => {
 		const keyWords = this.props.keyWords
-
+		const priceRange = this.props.priceRange
+		// проверка на то, что общих ключевых слов у фильтра и студии равно кол-ву слов в фильтре,
+		// а также на вхождение цены в диапазон
+		if((priceRange[0]>item.price) || (item.price>priceRange[1])){
+			return null
+		}
 		if(keyWords.length) {
-			if(_.intersection(item.params, keyWords).length != keyWords.length){
+			if( (_.intersection(item.params, keyWords).length != keyWords.length)){
 				return null;
 			}
 		}

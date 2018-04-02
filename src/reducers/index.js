@@ -22,9 +22,16 @@ const keyWords = handleActions({
   },
 }, []);
 
+const priceRange = handleActions({
+	[actions.changePriceRange](state, {payload: prices}) {
+		return prices
+	}
+}, [1000,2000])
+
 export default combineReducers({
 	studios, 
 	keyWords,
+	priceRange,
 	form: formReducer,
 	})
 // END

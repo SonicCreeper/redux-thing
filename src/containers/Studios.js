@@ -5,6 +5,7 @@ const mapStateToProps = state => {
   const props = {
     studios: state.studios,
     keyWords: state.keyWords,
+    priceRange: state.priceRange,
   }
   return props;
 };

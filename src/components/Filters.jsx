@@ -13,21 +13,23 @@ class Filters extends React.Component {
     this.props.reset()
 	}
 
-  componentDidMount () {
-    const slider = $("#slider").slider;
-    $('#slider-text').text('qwe')
-    $( "#slider" ).slider({
+  componentDidMount = () => {
+    const sliderEl = $('#slider')
+    const priceRange = this.props.priceRange
+    sliderEl.slider({
       range: true,
       min: 0,
       max: 3000,
       step: 100,
       values: [ 1000, 2000 ],
-      slide: function( event, ui ) {
-        $('#slider-text').text( "Цена от " + ui.values[ 0 ] + " до " + ui.values[ 1 ] );
+      slide: ( event, ui ) => {
+        $('#slider-text').text( `Цена от ${ui.values[ 0 ]} до ${ui.values[1]}`);
+      },
+      change: ( event, ui ) => {
+        this.props.changePriceRange(ui.values)
       }
     });
-    $('#slider-text').text( "Цена от " + $( "#slider" ).slider( "values", 0 ) +
-      " до " + $( "#slider" ).slider( "values", 1 ) );
+    $('#slider-text').text( `Цена от ${priceRange[0]} до ${priceRange[1]} `);
   }
 
 

@@ -4,11 +4,13 @@ import * as actionCreators from '../actions';
 
 const mapStateToProps = state => {
   const props = {
-    keyWords: state.keyWords
+    keyWords: state.keyWords,
+    priceRange: state.priceRange
+
   }
   return props;
 };
-console.log(actionCreators)
+
 const Container = connect(
   mapStateToProps,
   actionCreators,
