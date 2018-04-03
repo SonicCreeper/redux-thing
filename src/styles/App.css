@@ -1,0 +1,45 @@
+body {
+	background-color: #EEF3F6;
+}
+
+#slider-box {
+	background-color: #FFF;
+}
+
+#keyWord {
+	margin-right: 5px;
+}
+
+.ant-slider-handle {
+	border: solid 2px #1890ff;
+} 
+
+.ant-slider-track {
+	background-color: #1890ff;
+}
+
+.ant-slider-rail {
+	background-color: #FFF;
+}
+
+.ant-slider:hover .ant-slider-rail {
+	background-color: #FFF;
+}
+
+.ant-slider:hover .ant-slider-handle {
+	border: solid 2px #1890ff;
+} 
+
+.ant-slider:hover .ant-slider-track {
+	background-color: #1890ff;
+}
+
+#slider-text {
+	width: 80%
+}
+
+#slider-text span {
+	display: inline-block;
+	margin-left: 20px;
+}
+

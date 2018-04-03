@@ -10,7 +10,7 @@ const studios = (state = {}, action) => {
 }
 
 const keyWords = handleActions({
-  [actions.addKeyWords](state, { payload: {text} }) {
+  [actions.addKeyWords](state, { payload: text }) {
   	const newKeyWords = text.split(' ').filter(word => !state.includes(word));
     return [...state,...newKeyWords];
   },

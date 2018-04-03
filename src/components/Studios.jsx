@@ -1,7 +1,7 @@
 import _ from "lodash"
 import React from 'react'
 import data from '../data/studio.json'
-
+import { Row, Col } from 'antd'
 class Studios extends React.Component {
 
 
@@ -20,16 +20,16 @@ class Studios extends React.Component {
 		}
 
 		return (
-		<div key={item.id} id={item.id}>
+		<Col sm={{offset: 7}} md={{span:11, offset:1}} xl={7} key={item.id} id={item.id}>
 			<p>{item.name} {item.price}</p>
 			<p>{item.params.map((param, i) => <span key={_.uniqueId()}>{param} </span>)}</p>
 			<img src={item.view[0]} height="100"/>
-		</div>);
+		</Col>);
 	}
 
 	render() {
 		return(
-			<div>{this.props.studios.map(this.renderStudios)}</div>
+			<Row>{this.props.studios.map(this.renderStudios)}</Row>
 		);
 	}
 }
