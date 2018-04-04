@@ -1,7 +1,6 @@
 import _ from 'lodash'; // eslint-disable-line
 import { combineReducers } from 'redux'; // eslint-disable-line
 import { handleActions } from 'redux-actions'; // eslint-disable-line
-import { reducer as formReducer } from 'redux-form';
 import * as actions from '../actions'; // eslint-disable-line
 import data from '../data/studio.json'
 
@@ -32,6 +31,5 @@ export default combineReducers({
 	studios, 
 	keyWords,
 	priceRange,
-	form: formReducer,
 	})
 // END

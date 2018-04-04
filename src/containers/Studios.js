@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'; // eslint-disable-line
 import Component from '../components/Studios.jsx'
+import * as actionCreators from '../actions';
 
 const mapStateToProps = state => {
   const props = {
@@ -12,6 +13,6 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  null,
+  actionCreators,
 )(Component);
 
