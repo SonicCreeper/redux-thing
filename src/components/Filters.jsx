@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Button, Input, Icon, Slider } from 'antd'
+import { Form, Button, Input, Icon, Slider, Tooltip } from 'antd'
 
 class Filters extends React.Component {
 
@@ -42,12 +42,14 @@ class Filters extends React.Component {
       <div style={{paddingRight: '20%'}}>
       	<Form onSubmit={this.addKeyWords}>
           <Form.Item>
+            <Tooltip title='Можно несколько через пробел'>
               {this.props.form.getFieldDecorator('keyWords')(
                 <Input 
                   prefix={<Icon type="search" style={{ color: 'rgba(0,0,0,.25)' }} />} 
                   placeholder="Ключевые слова" 
                   size="large" />
               )}
+            </Tooltip>
             {this.showKeyWords()}
           </Form.Item>
       	</Form>
