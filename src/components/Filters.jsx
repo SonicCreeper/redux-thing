@@ -59,7 +59,8 @@ class Filters extends React.Component {
           <Slider 
             range 
             max={3000}
-            defaultValue={[1000, 2000]} 
+            defaultValue={[1000, 2000]}
+            step={50}
             onChange={this.updatePriceRangeText} 
             onAfterChange={this.changePriceRange} />
         </div>
