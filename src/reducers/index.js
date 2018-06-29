@@ -11,9 +11,9 @@ const studios = (state = {}, action) => {
 const keyWords = handleActions({
   [actions.addKeyWords](state, { payload: text }) {
   	const newKeyWordsArr = text.split(' ').filter(word => !state.includes(word));
-    const newKeyWordsSet = new Set;
-    newKeyWordsSet.add(...newKeyWordsArr)
-    return [...state,...newKeyWords];
+    const newKeyWordsSet = new Set();
+    newKeyWordsSet.add(...newKeyWordsArr);
+    return [...state,...newKeyWordsSet];
   },
   [actions.clearKeyWords](state) {
   	return [];
