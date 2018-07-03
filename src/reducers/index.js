@@ -1,7 +1,7 @@
-import _ from 'lodash'; // eslint-disable-line
-import { combineReducers } from 'redux'; // eslint-disable-line
-import { handleActions } from 'redux-actions'; // eslint-disable-line
-import * as actions from '../actions'; // eslint-disable-line
+import _ from 'lodash';
+import { combineReducers } from 'redux';
+import { handleActions } from 'redux-actions';
+import * as actions from '../actions';
 import data from '../data/studio.json'
 
 const studios = (state = {}, action) => {
@@ -11,8 +11,9 @@ const studios = (state = {}, action) => {
 const keyWords = handleActions({
   [actions.addKeyWords](state, { payload: text }) {
   	const newKeyWordsArr = text.split(' ').filter(word => !state.includes(word));
+    const newKeyWordsArrLowerCase = newKeyWordsArr.map(item => item.toLowerCase())
     const newKeyWordsSet = new Set();
-    newKeyWordsSet.add(...newKeyWordsArr);
+    newKeyWordsSet.add(...newKeyWordsArrLowerCase);
     return [...state,...newKeyWordsSet];
   },
   [actions.clearKeyWords](state) {
@@ -34,4 +35,3 @@ export default combineReducers({
 	keyWords,
 	priceRange,
 	})
-// END

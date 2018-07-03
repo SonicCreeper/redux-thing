@@ -1,4 +1,4 @@
-import { connect } from 'react-redux'; // eslint-disable-line
+import { connect } from 'react-redux';
 import Component from '../components/Studios.jsx'
 import * as actionCreators from '../actions';
 

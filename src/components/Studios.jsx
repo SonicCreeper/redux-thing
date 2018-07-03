@@ -1,8 +1,8 @@
 import _ from "lodash"
 import React from 'react'
 import { Row, Col } from 'antd'
-class Studios extends React.Component {
 
+class Studios extends React.Component {
 
 	renderStudios = (item, index) => {
 		const keyWords = this.props.keyWords
