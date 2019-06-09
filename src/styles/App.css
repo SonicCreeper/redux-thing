@@ -55,7 +55,7 @@ body {
 
 .studio-img{
 	margin: 0 auto;
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	border-bottom: 1px solid #CCC;
